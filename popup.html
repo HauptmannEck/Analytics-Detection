@@ -1,0 +1,41 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+    <head>
+        <title>Getting Started Extension's Popup</title>
+        <link href="style.css" rel="stylesheet" type="text/css">
+
+        <!--
+          - JavaScript and HTML must be in separate files: see our Content Security
+          - Policy documentation[1] for details and explanation.
+          -
+          - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+         -->
+        <script src="popup.js"></script>
+    </head>
+    <body>
+        <div id="status"></div>
+        <div id="meta">
+            <h3>Meta Details</h3>
+            <h4>Number of Analytics Metas Found:&nbsp;
+                <span id="meta-count"></span>
+            </h4>
+            <h4>Attributes</h4>
+            <ul id="meta-list">
+            </ul>
+        </div>
+        <div id="track">
+            <h3>Data Track Details</h3>
+            <h4>Number of Data Tracks Found:&nbsp;
+                <span id="track-count"></span>
+            </h4>
+            <ul id="track-list">
+            </ul>
+        </div>
+    </body>
+</html>
+
